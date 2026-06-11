@@ -2,11 +2,10 @@ import streamlit as st
 import pymongo
 
 def create_client():
-    username = st.secrets["connection"]["username"]
-    password = st.secrets["connection"]["password"]
-    cluster_name = st.secrets["connection"]["cluster_name"]
-    uri = "mongodb+srv://" + username + ":" + password + "@" + cluster_name + ".mongodb.net/?retryWrites=true&w=majority"
-
+    username = st.secrets["mongoDB"]["username"]
+    password = st.secrets["mongoDB"]["password"]
+    cluster_name = st.secrets["mongoDB"]["cluster_name"]
+    uri = "mongodb+srv://" + username + ":" + password + "@" + cluster_name + ".mongodb.net"
     client = pymongo.MongoClient(uri)
     return client
     

@@ -2,8 +2,13 @@
 __pycache__/
 .idea/
 .streamlit/
-
+images/
+Testing/
+venv/
 *.docx
+main.py
+
+
 
 *.py[cod]
 *$py.class
